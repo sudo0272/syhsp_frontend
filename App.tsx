@@ -8,13 +8,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Tab = createMaterialBottomTabNavigator();
+const MenuTab = createMaterialBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen
+      <MenuTab.Navigator>
+        <MenuTab.Screen
           name="home"
           component={HomeScreen}
           options={{
@@ -28,7 +28,7 @@ export default function App() {
             )
           }}
         />
-        <Tab.Screen
+        <MenuTab.Screen
           name="calendar"
           component={CalendarScreen}
           options={{
@@ -42,7 +42,7 @@ export default function App() {
             )
           }}
         />
-        <Tab.Screen
+        <MenuTab.Screen
           name="community"
           component={CommunityScreen}
           options={{
@@ -56,7 +56,7 @@ export default function App() {
             )
           }}
         />
-        <Tab.Screen
+        <MenuTab.Screen
           name="settings"
           component={SettingsScreen}
           options={{
@@ -70,7 +70,7 @@ export default function App() {
             )
           }}
         />
-      </Tab.Navigator>
+      </MenuTab.Navigator>
     </NavigationContainer>
   );
 }
