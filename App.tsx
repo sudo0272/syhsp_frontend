@@ -15,20 +15,6 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="calendar"
-          component={CalendarScreen}
-          options={{
-            tabBarLabel: '달력',
-            tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons
-                name="calendar-blank-outline"
-                color={color}
-                size={24}
-              />
-            )
-          }}
-        />
-        <Tab.Screen
           name="home"
           component={HomeScreen}
           options={{
@@ -43,13 +29,27 @@ export default function App() {
           }}
         />
         <Tab.Screen
+          name="calendar"
+          component={CalendarScreen}
+          options={{
+            tabBarLabel: '달력',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons
+                name="calendar-blank-outline"
+                color={color}
+                size={24}
+              />
+            )
+          }}
+        />
+        <Tab.Screen
           name="community"
           component={CommunityScreen}
           options={{
             tabBarLabel: '커뮤니티',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons
-                name="forum"
+                name="forum-outline"
                 color={color}
                 size={24}
               />
@@ -63,7 +63,7 @@ export default function App() {
             tabBarLabel: '설정',
             tabBarIcon: ({ color }) => (
               <MaterialCommunityIcons
-                name="account"
+                name="account-outline"
                 color={color}
                 size={24}
               />
