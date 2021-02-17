@@ -9,6 +9,9 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const MenuTab = createMaterialBottomTabNavigator();
+const TAB_BAR_ICON_COLOR = '#fff';
+const TAB_BAR_COLOR = '#000';
+const TAB_BAR_ICON_SIZE = 24;
 
 export default function App() {
   return (
@@ -19,13 +22,14 @@ export default function App() {
           component={HomeScreen}
           options={{
             tabBarLabel: '홈',
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: () => (
               <MaterialCommunityIcons
                 name="home-variant-outline"
-                color={color}
-                size={24}
+                color={TAB_BAR_ICON_COLOR}
+                size={TAB_BAR_ICON_SIZE}
               />
-            )
+            ),
+            tabBarColor: TAB_BAR_COLOR,
           }}
         />
         <MenuTab.Screen
@@ -33,13 +37,14 @@ export default function App() {
           component={CalendarScreen}
           options={{
             tabBarLabel: '달력',
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: () => (
               <MaterialCommunityIcons
                 name="calendar-blank-outline"
-                color={color}
-                size={24}
+                color={TAB_BAR_ICON_COLOR}
+                size={TAB_BAR_ICON_SIZE}
               />
-            )
+            ),
+            tabBarColor: TAB_BAR_COLOR,
           }}
         />
         <MenuTab.Screen
@@ -47,13 +52,14 @@ export default function App() {
           component={CommunityScreen}
           options={{
             tabBarLabel: '커뮤니티',
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: () => (
               <MaterialCommunityIcons
                 name="forum-outline"
-                color={color}
-                size={24}
+                color={TAB_BAR_ICON_COLOR}
+                size={TAB_BAR_ICON_SIZE}
               />
-            )
+            ),
+            tabBarColor: TAB_BAR_COLOR,
           }}
         />
         <MenuTab.Screen
@@ -61,13 +67,14 @@ export default function App() {
           component={SettingsScreen}
           options={{
             tabBarLabel: '설정',
-            tabBarIcon: ({ color }) => (
+            tabBarIcon: () => (
               <MaterialCommunityIcons
                 name="account-outline"
-                color={color}
-                size={24}
+                color={TAB_BAR_ICON_COLOR}
+                size={TAB_BAR_ICON_SIZE}
               />
-            )
+            ),
+            tabBarColor: TAB_BAR_COLOR,
           }}
         />
       </MenuTab.Navigator>
