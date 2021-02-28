@@ -29,7 +29,7 @@ export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
           style={styles.container}
         >
           <MaterialCommunityIcons
-            name="hand-heart"
+            name={this.icon}
             size={25}
             style={styles.icon}
           />
