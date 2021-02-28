@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#ff6961',
     color: 'white',
     padding: 9,
-    borderRadius: 50
+    borderRadius: 50,
+    margin: 5
   },
 
   label: {
