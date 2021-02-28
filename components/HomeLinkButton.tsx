@@ -7,6 +7,7 @@ export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
   title: string;
   uri: string;
   icon: string;
+  backgroundColor: string;
 
   constructor(props: HomeLinkButtonProps) {
     super(props);
@@ -14,6 +15,7 @@ export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
     this.title = props.title;
     this.uri = props.uri;
     this.icon = props.icon;
+    this.backgroundColor = props.backgroundColor;
   }
 
   private openLink() {
@@ -31,7 +33,7 @@ export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
           <MaterialCommunityIcons
             name={this.icon}
             size={25}
-            style={styles.icon}
+            style={[styles.icon, { backgroundColor: this.backgroundColor }]}
           />
           <Text
             style={styles.label}
@@ -49,8 +51,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center'
   },
+
   icon: {
-    backgroundColor: '#ff6961',
     color: 'white',
     padding: 9,
     borderRadius: 50,
@@ -59,7 +61,7 @@ const styles = StyleSheet.create({
 
   label: {
     fontSize: 13,
-    marginTop: 7
+    marginTop: 5
   }
 });
 
