@@ -6,17 +6,20 @@ import SettingsScreen from './components/SettingsScreen';
 import CommunityScreen from './components/CommunityScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+//import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const MenuTab = createMaterialBottomTabNavigator();
-const TAB_BAR_ICON_COLOR = '#fff';
-const TAB_BAR_COLOR = '#000';
+const TAB_BAR_ICON_COLOR = '#000';
 const TAB_BAR_ICON_SIZE = 24;
 
 export default function App() {
   return (
     <NavigationContainer>
-      <MenuTab.Navigator>
+      <MenuTab.Navigator
+        activeColor="#000"
+        inactiveColor="#000"
+        barStyle={{ backgroundColor: '#fff' }}>
         <MenuTab.Screen
           name="home"
           component={HomeScreen}
@@ -29,7 +32,6 @@ export default function App() {
                 size={TAB_BAR_ICON_SIZE}
               />
             ),
-            tabBarColor: TAB_BAR_COLOR,
           }}
         />
         <MenuTab.Screen
@@ -44,7 +46,6 @@ export default function App() {
                 size={TAB_BAR_ICON_SIZE}
               />
             ),
-            tabBarColor: TAB_BAR_COLOR,
           }}
         />
         <MenuTab.Screen
@@ -59,7 +60,6 @@ export default function App() {
                 size={TAB_BAR_ICON_SIZE}
               />
             ),
-            tabBarColor: TAB_BAR_COLOR,
           }}
         />
         <MenuTab.Screen
@@ -74,7 +74,6 @@ export default function App() {
                 size={TAB_BAR_ICON_SIZE}
               />
             ),
-            tabBarColor: TAB_BAR_COLOR,
           }}
         />
       </MenuTab.Navigator>
@@ -90,3 +89,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
