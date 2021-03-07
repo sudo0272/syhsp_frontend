@@ -16,7 +16,9 @@ export default class ScheduleCalendarDataComponent extends CalendarDataComponent
 
     for (const content of this.props.data) {
       contents.push(
-        <Text style={styles.text}>
+        <Text
+          style={styles.text}
+        >
           { content }
         </Text>
       );

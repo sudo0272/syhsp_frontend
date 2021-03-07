@@ -16,7 +16,10 @@ export default class MealCalendarDataComponent extends CalendarDataComponent {
 
     for (const meal of this.props.data) {
       meals.push(
-        <Text style={styles.text}>
+        <Text
+          style={styles.text}
+          key={meal}
+        >
           { meal }
         </Text>
       );

@@ -3,22 +3,19 @@ import { Button, StyleSheet, View, Text, TouchableWithoutFeedback, Linking } fro
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
-  title: string;
-  uri: string;
-  icon: string;
   backgroundColor: string;
+  icon: string;
 
   constructor(props: HomeLinkButtonProps) {
     super(props);
 
-    this.title = props.title;
-    this.uri = props.uri;
-    this.icon = props.icon;
-    this.backgroundColor = props.backgroundColor;
+    // will be chagned in inherited class
+    this.backgroundColor = '';
+    this.icon = '';
   }
 
   private openLink() {
-    Linking.openURL(this.uri)
+    Linking.openURL(this.props.uri)
   }
 
   render() {
@@ -37,7 +34,7 @@ export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
           <Text
             style={styles.label}
           >
-            {this.title}
+            {this.props.title}
           </Text>
         </View>
       </TouchableWithoutFeedback>
@@ -65,9 +62,7 @@ const styles = StyleSheet.create({
 });
 
 export interface HomeLinkButtonProps {
-  icon: string;
   title: string;
   uri: string;
-  backgroundColor: string;
 }
 

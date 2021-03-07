@@ -28,7 +28,9 @@ export default class CalendarDataScreen extends Component<CalendarDataProps, Cal
     this.data = [];
 
     this.crawler = new props.crawler();
+  }
 
+  componentDidMount() {
     this.updateData();
   }
 

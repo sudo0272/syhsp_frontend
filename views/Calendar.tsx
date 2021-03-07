@@ -8,6 +8,7 @@ import {
   StyleSheet
 } from 'react-native';
 import CalendarCell from './CalendarCell';
+import { v4 as uuidv4 } from 'react-native-uuid';
 
 export default class Calendar extends Component<CalendarProps, CalendarState> {
   constructor(props: CalendarProps) {
@@ -30,6 +31,7 @@ export default class Calendar extends Component<CalendarProps, CalendarState> {
     if (nextProps.day !== this.state.day ||
         nextProps.month !== this.state.month ||
         nextProps.year !== this.state.year) {
+
       this.setState({
         year: nextProps.year,
         month: nextProps.month,
@@ -68,12 +70,15 @@ export default class Calendar extends Component<CalendarProps, CalendarState> {
             isToday={ this.state.year === this.state.today.year && this.state.month === this.state.today.month && dates[datesIndex] === this.state.today.day }
             isSelected={ this.state.day === dates[datesIndex] }
             onPress={((day: number | undefined) => { day !== undefined && this.props.onDateChange(this.state.year, this.state.month, day); }).bind(this)}
+            key={ uuidv4() }
           />
         );
       }
 
       calendarRows.push(
-        <View style={styles.row}>
+        <View
+          style={styles.row}
+        >
           { cells }
         </View>
       );
