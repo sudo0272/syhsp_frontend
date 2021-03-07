@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Button, StyleSheet, View, Text, TouchableWithoutFeedback, Linking } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  Linking
+} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
@@ -20,7 +26,7 @@ export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
 
   render() {
     return (
-      <TouchableWithoutFeedback
+      <TouchableOpacity
         onPress={this.openLink.bind(this)}
       >
         <View
@@ -37,7 +43,7 @@ export default class HomeLinkButton extends Component<HomeLinkButtonProps> {
             {this.props.title}
           </Text>
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     );
   }
 }
