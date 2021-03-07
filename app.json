@@ -1,18 +1,4 @@
 {
   "name": "syhsp_frontend",
-  "displayName": "syhsp_frontend",
-  "expo": {
-    "name": "syhsp_frontend",
-    "slug": "syhsp_frontend",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "android": {
-      "package": "kr.kro.syhsp"
-    },
-    "ios": {
-      "bundleIdentifier": "kr.kro.syhsp"
-    }
-  }
+  "displayName": "syhsp_frontend"
 }
