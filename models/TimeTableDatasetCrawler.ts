@@ -3,7 +3,7 @@ import AccountData from './AccountData';
 
 export default class TimeTableDatasetCrawler extends NEISDatasetCrawler {
   setArguments() {
-    let accountData = AccountData.getInstatnce();
+    let accountData = AccountData.getInstance();
 
     this.requestArguments.url = 'https://open.neis.go.kr/hub/hisTimetable';
     this.requestArguments.all_ti_ymd = this.requestArguments.ymd;
