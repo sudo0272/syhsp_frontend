@@ -55,7 +55,7 @@ export default class CalendarDataScreen extends Component<CalendarDataProps, Cal
     });
   }
 
-  componentWillReceiveProps(nextProps: CalendarDataProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: CalendarDataProps) {
     if (nextProps.day !== this.state.day || nextProps.month !== this.state.month || nextProps.year !== this.state.year) {
       this.setState({
         year: nextProps.year,

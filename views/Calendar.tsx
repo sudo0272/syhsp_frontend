@@ -27,7 +27,7 @@ export default class Calendar extends Component<CalendarProps, CalendarState> {
   }
 
 
-  componentWillReceiveProps(nextProps: CalendarProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: CalendarProps) {
     if (nextProps.day !== this.state.day ||
         nextProps.month !== this.state.month ||
         nextProps.year !== this.state.year) {
