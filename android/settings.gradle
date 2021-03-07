@@ -1,4 +1,4 @@
-rootProject.name = 'syhspfrontend'
+rootProject.name = 'syhsp_frontend'
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 includeUnimodulesProjects()

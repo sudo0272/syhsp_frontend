@@ -1,4 +1,4 @@
-package com.syhspfrontend;
+package kr.kro.syhsp;
 
 import android.os.Bundle;
 

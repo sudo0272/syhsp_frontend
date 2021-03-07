@@ -7,6 +7,12 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "kr.kro.syhsp"
+    },
+    "ios": {
+      "bundleIdentifier": "kr.kro.syhsp"
+    }
   }
 }

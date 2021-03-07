@@ -1,4 +1,4 @@
-package com.syhspfrontend.generated;
+package kr.kro.syhsp.generated;
 
 import java.util.Arrays;
 import java.util.List;
