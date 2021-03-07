@@ -18,7 +18,7 @@ export default class Profile extends Component<ProfileProps, ProfileState> {
     this.state = {
     };
 
-    this.accountData = AccountData.getInstatnce();
+    this.accountData = AccountData.getInstance();
   }
 
   render() {
@@ -40,7 +40,7 @@ export default class Profile extends Component<ProfileProps, ProfileState> {
             {this.accountData.getSchoolNumber()}
           </Text>
           <Text style={styles.phoneNumber}>
-            {this.accountData.getFormattedPhonenumber()}
+            {this.accountData.getFormattedPhoneNumber()}
           </Text>
         </View>
       </View>

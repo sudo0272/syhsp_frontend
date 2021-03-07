@@ -11,7 +11,7 @@ export default class App extends Component<AppProps, AppState> {
   constructor(props: any) {
     super(props);
 
-    this.accountData = AccountData.getInstatnce();
+    this.accountData = AccountData.getInstance();
 
     this.state = {
       isLoggedIn: false,
