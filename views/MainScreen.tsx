@@ -49,20 +49,22 @@ export default class MainScreen extends Component {
               ),
             }}
           />
-          <MenuTab.Screen
-            name="community"
-            component={CommunityScreen}
-            options={{
-              tabBarLabel: '커뮤니티',
-              tabBarIcon: () => (
-                <MaterialCommunityIcons
-                  name="forum-outline"
-                  color={TAB_BAR_ICON_COLOR}
-                  size={TAB_BAR_ICON_SIZE}
-                />
-              ),
-            }}
-          />
+          {/*
+            <MenuTab.Screen
+              name="community"
+              component={CommunityScreen}
+              options={{
+                tabBarLabel: '커뮤니티',
+                tabBarIcon: () => (
+                  <MaterialCommunityIcons
+                    name="forum-outline"
+                    color={TAB_BAR_ICON_COLOR}
+                    size={TAB_BAR_ICON_SIZE}
+                  />
+                ),
+              }}
+            />
+            */}
           <MenuTab.Screen
             name="settings"
             component={SettingsScreen}
