@@ -7,9 +7,11 @@ export default class MealDatasetCrawler extends NEISDatasetCrawler {
   }
 
   manufacture(data: any): Array<any> {
-    let meals = [];
-    for (const meal of data['mealServiceDietInfo'][1]['row'][0]['DDISH_NM'].split('<br/>')) {
-      meals.push(meal);
+    let meals: any[][] = [[], []];
+    for (let mealIndex = 0; mealIndex < data['mealServiceDietInfo'][1]['row'].length; mealIndex++) {
+      for (const meal of data['mealServiceDietInfo'][1]['row'][mealIndex]['DDISH_NM'].split('<br/>')) {
+        meals[mealIndex].push(meal);
+      }
     }
 
     return meals;

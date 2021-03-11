@@ -6,13 +6,13 @@ import {
 } from 'react-native';
 import Calendar from './Calendar';
 import Swiper from 'react-native-swiper';
-import MealCalendarDataComponent from './MealCalendarDataComponent';
 import CalendarDataScreen from './CalendarDataScreen';
-import MealDatasetCrawler from '../models/MealDatasetCrawler';
 import TimeTableDatasetCrawler from '../models/TimeTableDatasetCrawler';
 import TimeTableCalendarDataComponent from './TimeTableCalendarDataComponent';
 import ScheduleDatasetCrawler from '../models/ScheduleDatasetCrawler';
 import ScheduleCalendarDataComponent from './ScheduleCalendarDataComponent';
+import MealDisplay from './MealDisplay';
+import MealDatasetCrawler from '../models/MealDatasetCrawler';
 
 export default class CalendarScreen extends Component<CalendarScreenProps, CalendarScreenState> {
   swiper: Swiper | null;
@@ -87,9 +87,10 @@ export default class CalendarScreen extends Component<CalendarScreenProps, Calen
             year={this.state.year}
             month={this.state.month}
             day={this.state.day}
-            component={MealCalendarDataComponent}
+            component={MealDisplay}
             crawler={MealDatasetCrawler}
             apiErrorMessage="급식 데이터가 없습니다"
+            subject="급식"
           />
           <CalendarDataScreen
             year={this.state.year}
@@ -98,6 +99,7 @@ export default class CalendarScreen extends Component<CalendarScreenProps, Calen
             component={TimeTableCalendarDataComponent}
             crawler={TimeTableDatasetCrawler}
             apiErrorMessage="시간표 데이터가 없습니다"
+            subject="시간표"
           />
           <CalendarDataScreen
             year={this.state.year}
@@ -106,6 +108,7 @@ export default class CalendarScreen extends Component<CalendarScreenProps, Calen
             component={ScheduleCalendarDataComponent}
             crawler={ScheduleDatasetCrawler}
             apiErrorMessage="학사일정 데이터가 없습니다"
+            subject="학사일정"
           />
         </Swiper>
       </View>

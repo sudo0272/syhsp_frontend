@@ -1,5 +1,5 @@
 import React from 'react';
-import CalendarDataComponent, { CalendarDataComponentProps } from './CalendarDataComponent';
+import CalendarDataComponent, { CalendarDataComponentProps, CalendarDataComponentStyle } from './CalendarDataComponent';
 import {
   View,
   Text,
@@ -18,7 +18,7 @@ export default class TimeTableCalendarDataComponent extends CalendarDataComponen
     for (const content of this.props.data) {
       contents.push(
         <Text
-          style={styles.text}
+          style={CalendarDataComponentStyle.text}
           key={ uuidv4() }
         >
           { content }
@@ -27,21 +27,10 @@ export default class TimeTableCalendarDataComponent extends CalendarDataComponen
     }
 
     return (
-      <View style={styles.container}>
+      <View style={CalendarDataComponentStyle.container}>
         { contents }
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center'
-  },
-
-  text: {
-    textAlign: 'center',
-    fontSize: 20
-  }
-})
 

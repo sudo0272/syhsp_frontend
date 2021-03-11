@@ -4,6 +4,7 @@ import {
 } from 'react';
 import {
   View,
+  Text,
   StyleSheet
 } from 'react-native';
 import LoadingScreen from './LoadingScreen';
@@ -70,11 +71,16 @@ export default class CalendarDataScreen extends Component<CalendarDataProps, Cal
   render() {
     return (
       <View style={styles.container}>
-        {this.state.isLoaded
+        <Text style={styles.subject}>
+          {this.props.subject}
+        </Text>
+        {!!this.state.isLoaded
           ? !this.state.error
-            ? <this.props.component
-                data={ this.data }
-              />
+            ? <View style={{flex: 1}}>
+                <this.props.component
+                  data={ this.data }
+                />
+              </View>
             : <ErrorScreen
                 reason={this.state.error}
                 apiErrorMessage={this.props.apiErrorMessage}
@@ -90,9 +96,16 @@ export default class CalendarDataScreen extends Component<CalendarDataProps, Cal
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    flex: 1
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    flex: 1,
+    paddingBottom: 70
+  },
+
+  subject: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center',
   }
 })
 
@@ -102,6 +115,7 @@ interface CalendarDataProps extends ErrorScreenMessages {
   day: number;
   crawler: typeof NEISDatasetCrawler;
   component: typeof CalendarDataComponent;
+  subject: string;
 }
 
 interface CalendarDataState {
