@@ -30,18 +30,23 @@ export default class Profile extends Component<ProfileProps, ProfileState> {
           style={styles.userIcon}
         />
         <View style={styles.information}>
-          <Text style={styles.name}>
-            {this.accountData.getName()}
-          </Text>
-          <Text style={styles.nickname}>
-            {this.accountData.getNickname()}
-          </Text>
+          {/*
+            *<Text style={styles.name}>
+            *  {this.accountData.getName()}
+            *</Text>
+            *<Text style={styles.nickname}>
+            *  {this.accountData.getNickname()}
+            *</Text>
+            */}
           <Text style={styles.schoolNumber}>
-            {this.accountData.getSchoolNumber()}
+            {this.accountData.getGrade()}학년
+            {this.accountData.getClass()}반
           </Text>
-          <Text style={styles.phoneNumber}>
-            {this.accountData.getFormattedPhoneNumber()}
-          </Text>
+          {/*
+            *<Text style={styles.phoneNumber}>
+            *  {this.accountData.getFormattedPhoneNumber()}
+            *</Text>
+            */}
         </View>
       </View>
     );

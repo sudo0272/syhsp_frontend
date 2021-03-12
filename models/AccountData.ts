@@ -4,13 +4,13 @@ export default class AccountData {
 
   private constructor() {
     this.userData = {
-      name: 'test_name',
-      nickname: 'test_nickname',
-      phoneNumber: '01012345678',
+      //name: 'test_name',
+      //nickname: 'test_nickname',
+      //phoneNumber: '01012345678',
       grade: 3,
       class: 12,
-      number: 1,
-      id: 'test_id'
+      //number: 1,
+      //id: 'test_id'
     }
   }
 
@@ -22,25 +22,25 @@ export default class AccountData {
     return AccountData.instance;
   }
 
-  getName() {
-    return this.userData.name;
-  }
+  //getName() {
+    //return this.userData.name;
+  //}
 
-  getNickname() {
-    return this.userData.nickname;
-  }
+  //getNickname() {
+    //return this.userData.nickname;
+  //}
 
-  getPhoneNumber() {
-    return this.userData.phoneNumber;
-  }
+  //getPhoneNumber() {
+    //return this.userData.phoneNumber;
+  //}
 
-  getFormattedPhoneNumber() {
-    return [
-      this.userData.phoneNumber.slice(0, 3),
-      this.userData.phoneNumber.slice(3, 7),
-      this.userData.phoneNumber.slice(7, 11)
-    ].join('-');
-  }
+  //getFormattedPhoneNumber() {
+    //return [
+      //this.userData.phoneNumber.slice(0, 3),
+      //this.userData.phoneNumber.slice(3, 7),
+      //this.userData.phoneNumber.slice(7, 11)
+    //].join('-');
+  //}
 
   getGrade() {
     return this.userData.grade;
@@ -50,21 +50,21 @@ export default class AccountData {
     return this.userData.class;
   }
 
-  getNumber() {
-    return this.userData.number;
-  }
+  //getNumber() {
+    //return this.userData.number;
+  //}
 
-  getSchoolNumber() {
-    return (
-      this.getGrade() * 10000 +
-      this.getClass() * 100 +
-      this.getNumber()
-    );
-  }
+  //getSchoolNumber() {
+    //return (
+      //this.getGrade() * 10000 +
+      //this.getClass() * 100 +
+      //this.getNumber()
+    //);
+  //}
 
-  getId() {
-    return this.userData.id;
-  }
+  //getId() {
+    //return this.userData.id;
+  //}
 
   isAvailable() {
     return true;
@@ -72,12 +72,12 @@ export default class AccountData {
 }
 
 export interface UserData {
-  name: string;
-  nickname: string;
-  phoneNumber: string;
+  //name: string;
+  //nickname: string;
+  //phoneNumber: string;
   grade: number;
   class: number;
-  number: number;
-  id: string;
+  //number: number;
+  //id: string;
 }
 
