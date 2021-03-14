@@ -82,7 +82,13 @@ export default class CalendarScreen extends Component<CalendarScreenProps, Calen
             </Text>
           </View>
         </Swiper>
-        <Swiper>
+        <Swiper
+          // when Swiper's bug is fixed, the value of loop attribute will be true
+          loop={false}
+          onIndexChanged={(index) => {
+            console.log('current index: ', index);
+          }}
+        >
           <CalendarDataScreen
             year={this.state.year}
             month={this.state.month}
