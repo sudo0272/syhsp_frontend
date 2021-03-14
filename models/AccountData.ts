@@ -42,11 +42,11 @@ export default class AccountData {
     //].join('-');
   //}
 
-  getGrade() {
+  getGrade(): number | undefined {
     return this.userData.grade;
   }
 
-  getClass() {
+  getClass(): number | undefined  {
     return this.userData.class;
   }
 
@@ -75,8 +75,8 @@ export interface UserData {
   //name: string;
   //nickname: string;
   //phoneNumber: string;
-  grade: number;
-  class: number;
+  grade?: number;
+  class?: number;
   //number: number;
   //id: string;
 }
