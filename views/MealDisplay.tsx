@@ -18,6 +18,7 @@ export default class MealDisplay extends CalendarDataComponent {
     return (
       <Swiper
         horizontal={false}
+        loop={false}
       >
         <View style={styles.container}>
           <Text style={styles.subtitle}>
