@@ -7,14 +7,12 @@ import {
   StyleSheet
 } from 'react-native';
 import AccountDatat from '../models/AccountData';
-import Profile from './Profile';
 
 export default class SettingsScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Profile
-        />
+
       </View>
     );
   }
