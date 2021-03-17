@@ -26,7 +26,7 @@ export const CalendarDataComponentStyle= StyleSheet.create({
 
   text: {
     textAlign: 'center',
-    fontSize: 20
+    fontSize: 20,
   },
 })
 

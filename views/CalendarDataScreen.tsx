@@ -76,7 +76,7 @@ export default class CalendarDataScreen extends Component<CalendarDataProps, Cal
         </Text>
         {!!this.state.isLoaded
           ? !this.state.error
-            ? <View style={{flex: 1}}>
+            ? <View style={{flex: 1, justifyContent: 'center'}}>
                 <this.props.component
                   data={ this.data }
                 />
